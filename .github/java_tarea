@@ -1,0 +1,19 @@
+public class MinutesConverter {
+    public static void main(String[] args) {
+        // Given number of minutes
+        long inputMinutes = 3456789;
+
+        // Conversion factors
+        long minsInDay = 60 * 24;          // minutes in one day
+        long minsInYear = minsInDay * 365; // minutes in one year (ignoring leap years)
+
+        // Find years and days
+        long yearsCount = inputMinutes / minsInYear;
+        long remaining = inputMinutes % minsInYear;
+        long daysCount = remaining / minsInDay;
+
+        // Display output
+        System.out.println("The value of " + inputMinutes + " minutes equals:");
+        System.out.println(yearsCount + " years and " + daysCount + " days.");
+    }
+}
